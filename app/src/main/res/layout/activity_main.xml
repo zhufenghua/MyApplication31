@@ -14,11 +14,12 @@
     <EditText
         android:id="@+id/edit_url"
         android:hint="请输入网址"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
          />
 
     <Button
+        android:onClick="goUrl"
         android:text="访问网址"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
