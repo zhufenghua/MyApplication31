@@ -21,11 +21,12 @@
         android:layout_height="wrap_content" />
     
     <ListView
+        android:id="@+id/lv"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="0dp"></ListView>
 
-    <LinearLayout
+    <RadioGroup
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -35,34 +36,35 @@
               3: android:gravity="center_horizontal": 让文本水平居中(默认图片是水平居中)
               4: 设置图文的间距: android:drawablePadding="5dp"
               5: android:textSize="0dp" 则隐藏文字
+              6: 采用RadioGroup来存储RadioButton 否则支持多选
         -->
 
         <RadioButton
             android:id="@+id/btn_index"
             android:text="首页"
-            android:drawableTop="@drawable/icon01_gray"
-            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/radio_selector_icon01"
+            style="@style/RadioButtonStyle.RadioButton_Weight"
             />
 
         <RadioButton
             android:text="发现"
-            android:drawableTop="@drawable/icon02_gray"
-            style="@style/RadioButtonStyle"
+            android:drawableTop="@drawable/radio_selector_icon02"
+            style="@style/RadioButtonStyle.RadioButton_Weight"
             />
 
         <RadioButton
             android:text="新闻"
             android:drawableTop="@drawable/icon03_gray"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonStyle.RadioButton_Weight"
             />
 
         <RadioButton
             android:text="TV电视"
             android:drawableTop="@drawable/icon04_gray"
-            style="@style/RadioButtonStyle"
+            style="@style/RadioButtonStyle.RadioButton_Weight"
             />
 
-    </LinearLayout>
+    </RadioGroup>
 
 
 </LinearLayout>
