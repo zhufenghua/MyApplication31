@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.zp.cn.myapplication.MainActivity">
-
-    <EditText
-        android:id="@+id/edit_url"
-        android:hint="请输入网址"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-         />
-
-    <Button
-        android:onClick="goUrl"
-        android:text="访问网址"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
     
     <ListView
         android:id="@+id/lv"
