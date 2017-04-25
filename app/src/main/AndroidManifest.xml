@@ -2,29 +2,44 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zp.cn.myapplication">
 
-    <!-- 1:gradle下载xutils3 jar（坐标）
+    <!--
+         1:gradle下载xutils3 jar（坐标）
          2: 配置需要的权限
          3: 创建一个Application对象(此对象代表当前app,注意此对象是单例模式,而且最先初始化)
     -->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <!-- application 代表当前应用程序的配置 -->
     <application
-        android:name="com.zp.cn.myapplication.utils.MyApplication"
+        android:name=".utils.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!-- 设置成全屏显示: android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="Welcome Activty"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="My Activty">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>
