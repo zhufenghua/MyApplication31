@@ -2,6 +2,7 @@ package com.zp.cn.myapplication;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,6 +37,13 @@ public class MainActivity extends Activity {
     @ViewInject(R.id.lv)
     private ListView listView;
 
+    @Override  // 按返回键会销毁当前Activty
+    protected void onDestroy() {
+        super.onDestroy();
+        // 正常退出APP应用
+        System.exit(0);
+    }
+
     @Override  // 在Activty创建的时候会加载布局文件
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +54,7 @@ public class MainActivity extends Activity {
         // 下午数据会从服务器获取
 
         // RequestParams：配置服务器的地址 需要网络权限
-        RequestParams params = new RequestParams("http://wxynr88312.jsp.fjjsp.net/result.txt");
+        RequestParams params = new RequestParams("http://www.jxy-edu.com/AjaxServlet");
         // 配置ssl
 //        params.setSslSocketFactory(...); // 设置ssl
         // 如果需要传递参数,则配置

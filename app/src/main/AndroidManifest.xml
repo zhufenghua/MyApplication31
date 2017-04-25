@@ -19,27 +19,35 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!-- 设置成全屏显示: android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen -->
         <activity
             android:name=".WelcomeActivity"
             android:label="Welcome Activty"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
-            >
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <!--                    入口配置: android.intent.action.MAIN, android.intent.category.LAUNCHER -->
+                <action android:name="android.intent.action.WELCOME" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="My Activty">
             <intent-filter>
+                <action android:name="aa.bb.cc" />
+                <!-- 标识当前Activty的类别LAUNCHER: 入口 -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".IndexActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

@@ -5,24 +5,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.zp.cn.myapplication.WelcomeActivity">
-
+    <!--
+    <com.zp.cn.myapplication.utils.MyView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    -->
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
 
-    <!-- 存储灰色圆点 -->
-    <LinearLayout
-        android:id="@+id/ll"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="50dp"
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp">
+
+        <!-- 存储灰色圆点 -->
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+        <!--  默认在相对布局的0,,0坐标-->>
+        <!--
+            1: Button TextView 内置组件: 只需要设置dp即可(随着分辨率自动适配)
+            2: ImageView: 需要根据不同的分辨率准备不同的图片.
+            3: code 代码中配置所有单位默认px,应该专门编写一个工具类来实现dp px转化
+         -->
+        <View
+            android:id="@+id/point_red"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/welcome_point_red" />
 
 
-    </LinearLayout>
+    </RelativeLayout>
+
 
 </RelativeLayout>

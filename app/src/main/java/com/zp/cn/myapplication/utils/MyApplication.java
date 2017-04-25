@@ -16,8 +16,9 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         // 1: 初始化配置, 2：获取远程的数据  3：对框架进行初始化
-        Log.i("zp","MyApplication onCreate");
+        Log.i("zp","MyApplication onCreate -->:" +  this.getResources().getDisplayMetrics().density);
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG); // 是否输出debug日志, 开启debug会影响性能.
+
     }
 }
